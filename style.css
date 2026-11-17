@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "D-DIN";
+  src: url("D-DIN.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "D-DIN";
+  src: url("D-DIN-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000000;
+  --ink: #F0F0FA;
+  --text-2: rgba(240, 240, 250, 0.72);
+  --text-3: rgba(240, 240, 250, 0.6);
+  --line: rgba(240, 240, 250, 0.28);
+  --faint: rgba(240, 240, 250, 0.25);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "D-DIN", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, .brand, nav a, .label, .button, .soon, footer.site a {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 { line-height: 1.2; letter-spacing: 0.04em; color: var(--ink); }
+
+h1 { font-size: 2.6rem; margin: 0 0 0.5em; }
+h2 { font-size: 1.35rem; margin: 2.8em 0 0.8em; padding-top: 1.4em; border-top: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 1.8em 0 0.5em; }
+
+p, ul { margin: 0 0 1.1em; color: var(--text-2); }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 0.5em; }
+strong { color: var(--ink); font-weight: 700; }
+
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+a:hover, a:focus { text-decoration-color: var(--ink); }
+a:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+header.site { padding: 28px 0; border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand { font-size: 1.2rem; letter-spacing: 0.14em; color: var(--ink); text-decoration: none; }
+nav a {
+  margin-left: 24px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: var(--text-2);
+  text-decoration: none;
+}
+nav a:hover, nav a:focus { color: var(--ink); }
+nav a:first-child { margin-left: 0; }
+
+main { padding: 72px 0 96px; }
+
+.hero { padding: 48px 0 24px; }
+.hero h1 { font-size: 4rem; letter-spacing: 0.04em; margin-bottom: 0.35em; }
+.tagline { font-size: 1.25rem; color: var(--text-2); max-width: 32em; margin: 0 0 2em; }
+
+.button, .soon {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid var(--ink);
+  border-radius: 5px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-decoration: none;
+}
+/* The one filled button of a page. */
+.button { background: var(--ink); color: #000000; }
+.button:hover, .button:focus { opacity: 0.85; }
+.soon { background: transparent; color: var(--ink); border-color: rgba(240, 240, 250, 0.5); }
+
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 72px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.card { padding: 32px 28px 24px 0; }
+.card + .card { padding: 32px 0 24px 28px; border-left: 1px solid var(--line); }
+.card h2 { margin-top: 0; padding-top: 0; border-top: 0; font-size: 1.2rem; }
+.label { color: var(--text-3); font-size: 0.75rem; letter-spacing: 0.14em; margin-bottom: 0.6em; }
+
+.muted { color: var(--text-3); }
+.small { font-size: 0.9rem; }
+
+.faq h2 { font-size: 1.1rem; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 32px 0 48px;
+  font-size: 0.9rem;
+}
+footer.site p { color: var(--text-3); }
+footer.site a { margin-right: 24px; font-size: 0.75rem; letter-spacing: 0.14em; text-decoration: none; color: var(--text-2); }
+footer.site a:hover, footer.site a:focus { color: var(--ink); }
+footer.site p + p a { text-transform: none; letter-spacing: 0; font-size: inherit; font-weight: 400; margin-right: 0; text-decoration: underline; text-decoration-color: var(--line); }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  h1 { font-size: 2rem; }
+  .hero h1 { font-size: 2.8rem; }
+  .cards { grid-template-columns: 1fr; }
+  .card, .card + .card { padding: 28px 0 20px; border-left: 0; }
+  .card + .card { border-top: 1px solid var(--line); }
+  main { padding: 40px 0 64px; }
+  nav a { margin-left: 16px; }
+  footer.site a { display: inline-block; margin: 0 16px 8px 0; }
+}
