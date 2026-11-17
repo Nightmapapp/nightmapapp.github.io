@@ -38,12 +38,13 @@
 <p>Star, planet, Moon and satellite positions, events and alerts are calculated on your iPhone. Your location, the city you choose, your search queries and the objects you look at stay on the device and are not sent to us or to anyone else.</p>
 
 <h2>3. Data we collect</h2>
-<h3>3.1 Usage analytics (Amplitude)</h3>
+<h3>3.1 Usage analytics (Amplitude and Google Analytics for Firebase)</h3>
 <p>When you first open the App, we ask whether you agree to share usage analytics. You can change your choice at any time in Settings &gt; Support &gt; Manage Consent.</p>
 <ul>
-  <li><strong>If you agree:</strong> events about how the App is used (for example screens and features opened, onboarding steps, paywall views, purchases and permission answers) with your country, the App version, the device type, whether Pro is active and whether location and notifications are allowed. Events are linked to a random installation identifier that is not connected to your name, Apple Account or advertising identifier. Legal basis: your consent (GDPR Art. 6(1)(a)).</li>
-  <li><strong>If you decline:</strong> only four anonymous events (app opened, onboarding completed, paywall shown, purchase completed) with your country. They use a new random identifier on every launch and are sent without your IP address and without any device identifier, so two launches cannot be linked. Legal basis: our legitimate interest in knowing that the App and purchases work (Art. 6(1)(f)).</li>
+  <li><strong>If you agree:</strong> the App sends to Amplitude and Google Analytics for Firebase events about how the App is used (for example screens and features opened, onboarding steps, paywall views, purchases and permission answers) with your country, the App version, the device type, whether Pro is active and whether location and notifications are allowed. Events are linked to random installation identifiers (one for each service) that are not connected to your name, Apple Account or advertising identifier. Firebase also records basic technical data (device model, iOS version, language, first launch and session times) and an approximate region derived from your IP address; Google does not store the full IP address. Legal basis: your consent (GDPR Art. 6(1)(a)).</li>
+  <li><strong>If you decline:</strong> Google Analytics for Firebase stays off, and only four anonymous events (app opened, onboarding completed, paywall shown, purchase completed) with your country. They use a new random identifier on every launch and are sent without your IP address and without any device identifier, and nothing about them is stored on your device, so two launches cannot be linked. Legal basis: our legitimate interest in knowing that the App and purchases work (Art. 6(1)(f)).</li>
 </ul>
+<p>Analytics never includes your coordinates, the city you chose, what you search for or the names of objects you look at. Google Signals, advertising features and ad personalisation are turned off, and the App does not collect the advertising identifier (IDFA).</p>
 <h3>3.2 Purchases and subscription status (RevenueCat)</h3>
 <p>Subscriptions are sold and processed by Apple through the App Store. We do not receive your name, payment details or Apple Account. To check whether your subscription is active, the App uses RevenueCat, which receives your App Store purchase receipts (product, price, currency, purchase and renewal dates), a random anonymous user identifier created by RevenueCat, the App version, the device model and iOS version, and the country derived from your IP address. Apple also sends us aggregated, non-identifying sales reports. Legal basis: performance of the contract (GDPR Art. 6(1)(b)) and our legal obligations under tax law (Art. 6(1)(c)).</p>
 <h3>3.3 Crash reports (Firebase Crashlytics, only with your consent)</h3>
@@ -69,18 +70,18 @@
   <tr><th>Recipient</th><th>Purpose</th><th>Privacy policy</th></tr>
   <tr><td>Apple Inc. / Apple Distribution International</td><td>App distribution, payments, subscriptions, sales reports</td><td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td></tr>
   <tr><td>RevenueCat, Inc.</td><td>Checking and restoring subscriptions</td><td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td></tr>
-  <tr><td>Google LLC (Firebase Crashlytics)</td><td>Crash reports, only with your consent</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+  <tr><td>Google LLC (Google Analytics for Firebase, Firebase Crashlytics)</td><td>Usage analytics and crash reports, only with your consent</td><td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
   <tr><td>Amplitude, Inc.</td><td>Usage analytics (stored in its EU data centre)</td><td><a href="https://amplitude.com/privacy">amplitude.com/privacy</a></td></tr>
   <tr><td>Google LLC (Gmail)</td><td>Support email</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
 </table>
 <p>We do not sell personal data and do not share it for third-party advertising.</p>
 
 <h2>6. International transfers</h2>
-<p>Amplitude stores App analytics in the European Union. RevenueCat and Firebase Crashlytics process data in the United States. Amplitude, RevenueCat, Apple and Google are US companies and may access data from outside the European Economic Area. Such transfers are protected by the European Commission's Standard Contractual Clauses and, where applicable, the EU-U.S. Data Privacy Framework.</p>
+<p>Amplitude stores App analytics in the European Union. RevenueCat, Google Analytics for Firebase and Firebase Crashlytics may process data in the United States. Amplitude, RevenueCat, Apple and Google are US companies and may access data from outside the European Economic Area. Such transfers are protected by the European Commission's Standard Contractual Clauses and, where applicable, the EU-U.S. Data Privacy Framework.</p>
 
 <h2>7. How long we keep data</h2>
 <ul>
-  <li>Analytics events: up to 24 months, then deleted.</li>
+  <li>Analytics events: up to 24 months in Amplitude and 14 months in Google Analytics for Firebase, then deleted.</li>
   <li>Crash reports: 90 days.</li>
   <li>Purchase and subscription records (RevenueCat): for as long as you have a subscription and then for the period required by Polish tax law.</li>
   <li>Support emails: up to 2 years after the conversation ends.</li>
@@ -89,7 +90,7 @@
 </ul>
 
 <h2>8. Your rights</h2>
-<p>Under the GDPR you have the right to access, correct and delete your data, to restrict or object to processing, to data portability, and to withdraw consent at any time without affecting earlier processing. To exercise a right, write to <a href="mailto:nightmap.support@gmail.com">nightmap.support@gmail.com</a>. Because there are no accounts, your data is identified only by random identifiers (the analytics installation identifier and the RevenueCat user identifier). To help us find your data, include them in your email: you can copy them in the App under Settings &gt; Support &gt; Manage Consent. You may also lodge a complaint with the Polish data protection authority, the President of the Personal Data Protection Office (UODO), ul. Stawki 2, 00-193 Warsaw, <a href="https://uodo.gov.pl">uodo.gov.pl</a>, or with the authority in your own country.</p>
+<p>Under the GDPR you have the right to access, correct and delete your data, to restrict or object to processing, to data portability, and to withdraw consent at any time without affecting earlier processing. To exercise a right, write to <a href="mailto:nightmap.support@gmail.com">nightmap.support@gmail.com</a>. Because there are no accounts, your data is identified only by random identifiers (the analytics installation identifiers and the RevenueCat user identifier). To help us find your data, include them in your email: you can copy them in the App under Settings &gt; Support &gt; Manage Consent. You may also lodge a complaint with the Polish data protection authority, the President of the Personal Data Protection Office (UODO), ul. Stawki 2, 00-193 Warsaw, <a href="https://uodo.gov.pl">uodo.gov.pl</a>, or with the authority in your own country.</p>
 <p>If you live in California or another US state with a privacy law, you have similar rights to know, delete and correct data. We do not sell or share personal information as defined by those laws.</p>
 
 <h2>9. Children</h2>
