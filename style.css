@@ -128,3 +128,7 @@ footer.site p + p a { text-transform: none; letter-spacing: 0; font-size: inheri
   nav a { margin-left: 16px; }
   footer.site a { display: inline-block; margin: 0 16px 8px 0; }
 }
+
+table { width: 100%; border-collapse: collapse; margin: 0 0 1.4em; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.6em 0.8em 0.6em 0; border-bottom: 1px solid var(--line); color: var(--text-2); }
+th { color: var(--ink); font-weight: 700; }
